@@ -10,17 +10,17 @@
 </head>
 <body>
 <?php
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
-    $namalengkap = $_POST["nama lengkap"];
+    $namalengkap = $_POST["nama"];
     $nim = $_POST["nim"];
     $alamat = $_POST["alamat"];
-    $jeniskelamin = $_POST["Jenis Kelamin"];
+    $jeniskelamin = $_POST["jeniskelamin"];
     $jurusan = $_POST["jurusan"];
     $email = $_POST["email"];
 
     // Display the retrieved data
-
     $formData = [
         "Nama Lengkap: $namalengkap",
         "NIM: $nim",
@@ -28,7 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "Jenis Kelamin: $jeniskelamin",
         "Jurusan = $jurusan",
         "Email: $email",
-        
     ];
 
     if (!empty($jurusan)) {
@@ -49,7 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Write form data to a text file
     $fileName = "HasilData.txt";
     $formDataString .= "\n";
-    // file_put_contents($fileName, $formDataString);
     file_put_contents($fileName, $formDataString, FILE_APPEND);
 
     // Display a success message
@@ -61,44 +59,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
+
 <h2>Form Submission Result</h2>
 
-        <table class="table table-dark">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Nama Lengkap</th>
-      <th scope="col">NIM</th>
-      <th scope="col">Alamat</th>
-      <th scope="col">Jenis Kelamin</th>
-      <th scope="col">Jurusan</th>
-      <th scope="col">Email</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td><?php echo $nama; ?></td>
-      <td><?php echo $nim; ?></td>
-      <td><?php echo $alamat; ?></td>
-      <td><?php echo $jeniskelamin; ?></td>
-      <td><?php echo $jurusan; ?></td>
-      <td><?php echo $email; ?></td>
-      <td>
-                    <?php
-                    if (!empty($jurusan)) {
-                        echo "<ul>";
-                        foreach ($jurusan as $s) {
-                            echo "<li>$s</li>";
-                        }
-                        echo "</ul>";
-                    } else {
-                        echo "Anda belum memilih jurusan.";
+<table class="table table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nama Lengkap</th>
+            <th scope="col">NIM</th>
+            <th scope="col">Alamat</th>
+            <th scope="col">Jenis Kelamin</th>
+            <th scope="col">Jurusan</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td><?php echo $namalengkap; ?></td>
+            <td><?php echo $nim; ?></td>
+            <td><?php echo $alamat; ?></td>
+            <td><?php echo $jeniskelamin; ?></td>
+            <td>
+                <?php
+                if (!empty($jurusan)) {
+                    echo "<ul>";
+                    foreach ($jurusan as $s) {
+                        echo "<li>$s</li>";
                     }
-                    ?>
-                </td>
-    </tr>
-  </tbody>
-
+                    echo "</ul>";
+                } else {
+                    echo "Anda belum memilih jurusan.";
+                }
+                ?>
+            </td>
+            <td><?php echo $email; ?></td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>
