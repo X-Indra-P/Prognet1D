@@ -12,6 +12,7 @@
 <?php
 <?php
 <?php
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $namalengkap = $_POST["nama"];
@@ -27,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "NIM: $nim",
         "Alamat: $alamat",
         "Jenis Kelamin: $jeniskelamin",
-        "Jurusan = $jurusan",
+        "Jurusan: $jurusan",
         "Email: $email",
     ];
 
