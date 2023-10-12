@@ -11,6 +11,7 @@
 <body>
 <?php
 <?php
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $namalengkap = $_POST["nama"];
@@ -57,7 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p>Form submission error.</p>";
 }
 ?>
-
 
 
 <h2>Form Submission Result</h2>
