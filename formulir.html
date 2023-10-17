@@ -84,5 +84,28 @@
             </form>
         </div>
     </div>
+
+<!-- Formulir HTML yang telah Anda berikan -->
+<!-- ... -->
+
+<?php
+include('koneksi.php');
+
+$sql = "SELECT * FROM biodata";
+$result = mysqli_query($koneksi, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    echo "<h3>Data Biodata:</h3>";
+    echo "<ul>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<li>Nama: " . $row['nama'] . ", NIM: " . $row['nim'] . ", Alamat: " . $row['alamat'] . ", Jenis Kelamin: " . $row['jenis_kelamin'] . ", Jurusan: " . $row['jurusan'] . ", Email: " . $row['email'] . "</li>";
+    }
+    echo "</ul>";
+} else {
+    echo "Tidak ada data yang ditemukan.";
+}
+
+mysqli_close($koneksi);
+?>
 </body>
 </html>
