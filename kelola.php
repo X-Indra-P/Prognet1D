@@ -33,11 +33,11 @@ if(isset($_GET['ubah'])){
 <head>
 	<meta charset="utf-8">
 	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="js/bootstrap.bundle.min.js" ></script>
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<script src="bootstrap.bundle.min.js" ></script>
 
 	<!-- Font Awesome -->
-	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="font-awesome.min.css">
 	
 	<title>FORM BIODATA</title>
 </head>
