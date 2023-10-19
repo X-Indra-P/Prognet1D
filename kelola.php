@@ -113,7 +113,7 @@ if(isset($_GET['ubah'])){
 						<?php
 					}
 					?>
-					<a href="index.php" type="button" class="btn btn-danger">
+					<a href="crud.php" type="button" class="btn btn-danger">
 						<i class="fa fa-reply" aria-hidden="true"></i>
 						Batal
 					</a>
