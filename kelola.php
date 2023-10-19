@@ -6,6 +6,7 @@ include 'koneksi.php';
 $id_siswa = '';
 $nisn = '';
 $nama_siswa = '';
+$kelas = '';
 $jenis_kelamin = '';
 $alamat = '';
 
@@ -19,6 +20,7 @@ if(isset($_GET['ubah'])){
 
 	$nisn = $result['nisn'];
 	$nama_siswa = $result['nama_siswa'];
+    $kelas = $result['kelas'];
 	$jenis_kelamin = $result['jenis_kelamin'];
 	$alamat = $result['alamat'];
 
@@ -37,13 +39,13 @@ if(isset($_GET['ubah'])){
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
 	
-	<title>belajar_crud</title>
+	<title>FORM BIODATA</title>
 </head>
 <body>
 	<nav class="navbar navbar-light bg-light mb-4">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">
-				CRUD - BS5
+				FORM BIODATA SISWA SMA WAYANG JAWIR
 			</a>
 		</div>
 	</nav>
@@ -66,6 +68,12 @@ if(isset($_GET['ubah'])){
 					<input required type="text" name="nama_siswa" class="form-control" id="nama" placeholder="Ex: Alexander" value="<?php echo $nama_siswa; ?>">
 				</div>
 			</div>
+            <div class="mb-3 row">
+				<label for="nama" class="col-sm-2 col-form-label">
+					Kelas
+				</label>
+				<div class="col-sm-10">
+					<input required type="text" name="kelas" class="form-control" id="kelas" placeholder="Ex: X MIPA 7/X IPS 2" value="<?php echo $kelas; ?>">
 			<div class="mb-3 row">
 				<label for="jkel" class="col-sm-2 col-form-label">
 					Jenis Kelamin
@@ -75,14 +83,6 @@ if(isset($_GET['ubah'])){
 						<option <?php if($jenis_kelamin == 'Laki-laki'){ echo "selected";} ?> value="Laki-laki">Laki-laki</option>
 						<option <?php if($jenis_kelamin == 'Perempuan'){ echo "selected";} ?> value="Perempuan">Perempuan</option>
 					</select>
-				</div>
-			</div>
-			<div class="mb-3 row">
-				<label for="foto" class="col-sm-2 col-form-label">
-					Foto Siswa
-				</label>
-				<div class="col-sm-10">
-					<input <?php if(!isset($_GET['ubah'])){ echo "required";} ?> class="form-control" type="file" name="foto" id="foto" accept="image/*">
 				</div>
 			</div>
 			<div class="mb-3 row">

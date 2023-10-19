@@ -2,7 +2,7 @@
 	$host = 'localhost';
 	$user = 'root';
 	$pass = '';
-	$db = 'prognetd1';
+	$db = 'tb_siswa';
 
 	$conn = mysqli_connect($host, $user, $pass, $db);
 	
