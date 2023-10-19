@@ -19,13 +19,13 @@ session_start();
 	<script src="bootstrap.bundle.min.js" ></script>
 
 	<!-- Font Awesome -->
-	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="font-awesome.min.css">
 
 	<!-- JQuery -->
-	<link rel="stylesheet" type="text/css" href="datatables/datatables.css"/>
-	<script type="text/javascript" src="datatables/datatables.js"></script>
+	<link rel="stylesheet" type="text/css" href="datatables.css"/>
+	<script type="text/javascript" src="datatables.js"></script>
 
-	<title>belajar_crud</title>
+	<title>Database Siswa</title>
 </head>
 <script type="text/javascript">
 	$(document).ready( function () {
@@ -36,7 +36,7 @@ session_start();
 	<nav class="navbar navbar-light bg-light">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">
-				CRUD - BS5
+				DATA SISWA SMA JAWIR
 			</a>
 		</div>
 	</nav>
