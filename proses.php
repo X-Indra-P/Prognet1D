@@ -9,7 +9,7 @@
 
 			if($berhasil){
 				$_SESSION['hasil'] = "Data berhasil ditambahkan,success";
-				header("location: index.php");
+				header("location: crud.php");
 			} else {
 				echo $berhasil;
 			}
@@ -20,7 +20,7 @@
 			
 			if($berhasil){
 				$_SESSION['hasil'] = "Data berhasil diperbarui,success";
-				header("location: index.php");
+				header("location: crud.php");
 			} else {
 				echo $berhasil;
 			}
@@ -34,7 +34,7 @@
 
 		if($berhasil){
 			$_SESSION['hasil'] = "Data berhasil dihapus,success";
-			header("location: index.php");
+			header("location: crud.php");
 		} else {
 			echo $berhasil;
 		}
