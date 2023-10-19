@@ -5,6 +5,8 @@ $query = "SELECT * FROM tb_siswa;";
 $sql = mysqli_query($conn, $query);
 $no = 0;
 
+error_reporting(E_ALL);  ini_set('display_errors', '1');
+
 session_start();
 
 ?>
@@ -36,7 +38,7 @@ session_start();
 	<nav class="navbar navbar-light bg-light">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">
-				DATA SISWA SMA JAWIR
+				DATA SISWA SMA NEGERI 1 DENPASAR
 			</a>
 		</div>
 	</nav>
@@ -49,7 +51,7 @@ session_start();
 				<p>Berisi data yang telah disimpan di database.</p>
 			</blockquote>
 			<figcaption class="blockquote-footer">
-				CRUD <cite title="Source Title">Create Read Update Delete</cite>
+				CRUD <cite title="Source Title">Create Read Update Delete Data Siswa</cite>
 			</figcaption>
 		</figure>
 		<a href="kelola.php" type="button" class="btn btn-primary mb-3">
@@ -120,20 +122,5 @@ session_start();
 			</table>
 		</div>
 	</div>
-
-	<ul class="nav justify-content-center bg-dark mt-5">
-		<li class="nav-item">
-			<a class="nav-link active text-white" aria-current="page" href="#">Active</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link text-white" href="#">Link</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link text-white" href="#">Link</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link disabled text-white">Disabled</a>
-		</li>
-	</ul>
 </body>
 </html>
