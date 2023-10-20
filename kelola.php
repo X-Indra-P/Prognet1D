@@ -42,13 +42,6 @@ if(isset($_GET['ubah'])){
 	<title>FORM BIODATA</title>
 </head>
 <body>
-	<nav class="navbar navbar-light bg-light mb-4">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">
-				FORM BIODATA SISWA SMA WAYANG JAWIR
-			</a>
-		</div>
-	</nav>
 	<div class="container">
 		<form method="POST" action="proses.php" enctype="multipart/form-data">
 			<input type="hidden" value="<?php echo $id_siswa; ?>" name="id_siswa">
@@ -120,11 +113,5 @@ if(isset($_GET['ubah'])){
 				</div>
 			</div>
 		</form>
-	</div>
-	<div class="position-absolute bottom-0 start-50 translate-middle-x">
-		<div class="d-flex p-2 bd-highlight bg-dark text-white">
-			I'm a flexbox container!
-		</div>
-	</div>
 </body>
 </html>
