@@ -33,13 +33,6 @@ session_start();
 	} );
 </script>
 <body>
-	<nav class="navbar navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">
-				DATA SISWA SMA NEGERI 1 DENPASAR
-			</a>
-		</div>
-	</nav>
 
 	<!-- Judul -->
 	<div class="container">
